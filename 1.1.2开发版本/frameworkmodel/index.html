@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>数字生命 - 芙宁娜</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      overflow: hidden;
+    }
+    #live2dCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="live2dCanvas" width="800" height="600"></canvas>
+
+  <!-- 引入 Live2D 渲染引擎 -->
+  <script src="live2d/live2dcubismcore.min.js"></script>
+  <script src="live2d/live2d.min.js"></script>
+
+  <!-- 初始化模型 -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const canvas = document.getElementById("live2dCanvas");
+      const modelPath = "furina/furina.model3.json";
+
+      loadlive2d("live2d", "./furina/furina.model3.json");
+    });
+  </script>
+</body>
+</html>
